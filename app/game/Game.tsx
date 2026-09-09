@@ -782,13 +782,21 @@ export default function Game() {
           <div className="shade" />
           <header className="mast">
             <span className="brand">☠ GRABUGE</span>
-            <span className="pill">2 À 4 JOUEURS · ACTIONS SIMULTANÉES</span>
+            <div className="mast-actions">
+              <span className="pill mast-tagline">2 À 4 JOUEURS · ACTIONS SIMULTANÉES</span>
+              <a className="github-link" href="https://github.com/ClementV78/grabuge"
+                target="_blank" rel="noopener noreferrer">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </header>
           <section className="start">
             <div className="eyebrow">PIRATES EN PAGAILLE</div>
             <h1>GRABUGE !</h1>
             <h2>
-              Pas de quartier, pas de tour par tour !
+              Pas de quartier,
+              <br />
+              pas de tour par tour !
               <br />
               Ça tire de tous les côtés !
             </h2>
