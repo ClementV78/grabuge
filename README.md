@@ -1,6 +1,6 @@
 # GRABUGE !
 
-**Pas de quartier. Pas chacun son tour.**
+**Pas de quartier, pas de tour par tour ! Ça tire de tous les côtés !**
 
 Grabuge est un jeu d'artillerie 2D en temps réel pour 2 à 4 pirates. Tout le monde se déplace, vise et tire en même temps sur des terrains entièrement destructibles, pendant que la marée finit par engloutir les positions les plus basses.
 

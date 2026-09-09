@@ -788,9 +788,9 @@ export default function Game() {
             <div className="eyebrow">PIRATES EN PAGAILLE</div>
             <h1>GRABUGE !</h1>
             <h2>
-              Pas de quartier.
+              Pas de quartier, pas de tour par tour !
               <br />
-              Pas chacun son tour.
+              Ça tire de tous les côtés !
             </h2>
             <p>
               Un bout d’île. Un arsenal déraisonnable.
