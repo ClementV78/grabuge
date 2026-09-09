@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "grabuge-multiplayer",
+  "main": "server/worker.ts",
+  "compatibility_date": "2026-05-15",
+  "durable_objects": {"bindings": [{"name":"ROOMS","class_name":"GameRoom"},{"name":"REGISTRY","class_name":"RoomRegistry"}]},
+  "migrations": [{"tag":"v1","new_sqlite_classes":["GameRoom"]},{"tag":"v2","new_sqlite_classes":["RoomRegistry"]}],
+  "vars": {"ALLOWED_ORIGIN":"http://localhost:3000", "MAX_PLAYERS":"4"},
+  "observability": {"enabled":true}
+}
+
