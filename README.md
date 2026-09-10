@@ -1,4 +1,4 @@
-![Bandeau promotionnel de Grabuge](docs/promo-banner.jpg)
+![Illustration de Grabuge](docs/hero.jpg)
 
 # GRABUGE !
 
