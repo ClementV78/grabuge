@@ -1,3 +1,5 @@
+![Bandeau promotionnel de Grabuge](docs/promo-banner.png)
+
 # GRABUGE !
 
 **Pas de quartier, pas de tour par tour ! Ça tire de tous les côtés !**
