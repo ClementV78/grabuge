@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
@@ -771,7 +772,7 @@ export default function Game() {
     else solo(false);
   };
   return (
-    <main className={"game-shell "+(mode==='play'?'is-playing':'')}>
+    <main className={"game-shell "+(mode==='play'?'is-playing':mode==='menu'?'is-home':'')}>
       <canvas
         ref={canvas}
         className="scene"
@@ -791,35 +792,29 @@ export default function Game() {
             </div>
           </header>
           <section className="start">
+            <div className="home-intro">
             <div className="eyebrow">PIRATES EN PAGAILLE</div>
             <h1>GRABUGE !</h1>
             <h2>
-              Pas de quartier,
+              Pas de quartier, pas de tour par tour !
               <br />
-              pas de tour par tour !
-              <br />
-              Ça tire de tous les côtés !
+              <span className="home-punchline">Ça tire de tous les côtés !</span>
             </h2>
             <p>
-              Un bout d’île. Un arsenal déraisonnable.
-              <br />
-              Et tes amis au fond de l’eau.
+              Un bout d’île. Un arsenal déraisonnable. Et tes amis au fond de l’eau.
             </p>
+            </div>
+            <div className="home-setup">
+            <div className="setup-heading"><div><div className="eyebrow">À L’ABORDAGE</div><h2>Prépare ton équipage.</h2></div><span aria-hidden="true">⚔</span></div>
             <div className="settings-line">
-              <input
+              <label className="field"><span>Ton nom de pirate</span><input
                 aria-label="Ton nom de pirate"
                 maxLength={18}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              <span className="pill">☠ {specials.length}/2 équipements</span>
+              </label><span className="pill">☠ {specials.length}/2 équipements</span>
             </div>
-            <TerrainPicker value={map} onChange={setMap} />
-            {equipmentSlots}
-            <label className="field"><span>Niveau des bots</span>
-<select value={botLevel} onChange={(e) => { if (isBotLevel(e.target.value)) setBotLevel(e.target.value); }}>
-{BOT_LEVELS.map((level) => <option key={level} value={level}>{botLabels[level]}</option>)}
-</select></label>
             <div className="actions">
               <button className="primary" onClick={() => solo(false)}>
                 ⚔ Jouer contre les bots
@@ -831,6 +826,13 @@ export default function Game() {
                 Avec des amis ↗
               </button>
             </div>
+            <TerrainPicker value={map} onChange={setMap} />
+            <div className="equipment-label">Ton arsenal <span>Choisis 2 équipements</span></div>
+            {equipmentSlots}
+            <label className="field"><span>Niveau des bots</span>
+<select value={botLevel} onChange={(e) => { if (isBotLevel(e.target.value)) setBotLevel(e.target.value); }}>
+{BOT_LEVELS.map((level) => <option key={level} value={level}>{botLabels[level]}</option>)}
+</select></label>
             <div className="actions">
               <button className="menu-link" onClick={() => solo(true)}>
                 Terrain d’entraînement
@@ -847,6 +849,14 @@ export default function Game() {
               >
                 Réglages
               </button>
+            </div>
+            </div>
+            <div className="home-gameplay">
+            <figure className="game-preview">
+              <Image src="/gameplay-preview.png" alt="Quatre pirates s’affrontent dans une arène de canyon, entre tirs et plateformes destructibles." width={1920} height={960} />
+              <figcaption><span className="live-dot" /> Un aperçu du chaos <span>100 % simultané</span></figcaption>
+            </figure>
+            <div className="home-features"><span>02 à 04 pirates</span><span>Terrains destructibles</span><span>En ligne ou contre les bots</span></div>
             </div>
           </section>
           <div className="footer-note">

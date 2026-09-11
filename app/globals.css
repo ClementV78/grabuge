@@ -54,3 +54,96 @@
 .result-detail-row span{color:#a9c3c3}.result-detail-row b{display:block;color:#fff4c4;margin-top:2px}
 @media(max-width:700px){.results-panel>.actions{position:static;margin-top:14px}.result-ranking{grid-template-columns:1fr}.result-detail-row{grid-template-columns:1fr 1fr}.result-detail-row>strong{grid-column:1/-1}.result-score b{font-size:16px}}
 .mast-actions{display:flex;align-items:center;gap:10px}.github-link{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:2px solid #ffe093;border-radius:7px;background:#ffc44e;color:#19323a;font-size:13px;font-weight:900;text-decoration:none;box-shadow:0 4px 0 #7d452b;transition:transform .12s,filter .12s}.github-link:hover{filter:brightness(1.08);transform:translateY(-2px)}.github-link:focus-visible{outline:3px solid white;outline-offset:3px}@media(max-width:700px){.mast-tagline{display:none}.github-link{padding:8px 10px;font-size:12px}}
+
+/* Home: illustrated backdrop, gameplay preview and a dedicated setup card. */
+.is-home{background:#071e28;isolation:isolate;position:relative;min-height:100dvh;font-family:Arial,Helvetica,sans-serif}
+.is-home::before{content:"";position:absolute;inset:88px 0 auto;height:56.32vw;max-height:1080px;z-index:-1;background:linear-gradient(180deg,transparent 65%,#071e28 100%),url('/hero.jpg') center top/cover no-repeat;pointer-events:none}
+.is-home .scene,.is-home .shade{display:none}
+.is-home .mast{max-width:1480px;margin:auto;padding:28px 48px}
+.is-home .brand{font-size:24px;letter-spacing:-1px;text-shadow:none}
+.is-home .mast-tagline{background:transparent;border:0;color:#a3c3c8;font-size:11px;letter-spacing:1px}
+.is-home .github-link{background:#ffffff08;border:1px solid #ffffff25;box-shadow:none;color:#e3eff0;border-radius:10px;padding:11px 16px}
+.is-home .start{width:auto;max-width:1384px;margin:36px auto 0;padding:0 0 32px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.home-intro{padding-top:22px;min-width:0}
+.is-home .eyebrow{font-size:10px;letter-spacing:2.6px;color:#75d4cb}
+.is-home .start h1{font-size:clamp(64px,6.8vw,104px);letter-spacing:-6px;line-height:1;margin:20px 0 24px;transform:none;text-shadow:none;color:#ffd16b;white-space:nowrap}
+.is-home .home-intro h2{font-size:clamp(24px,2.5vw,35px);line-height:1.3;letter-spacing:-.8px;margin:0 0 16px;font-weight:800}
+.is-home .start p{font-size:15px;line-height:1.7;color:#acc2c8;margin:0 0 28px}
+.game-preview{margin:0;overflow:hidden;border:1px solid #ffffff26;border-radius:16px;background:#103441;box-shadow:0 20px 60px #0003}
+.game-preview img{display:block;width:100%;height:auto}
+.game-preview figcaption{display:flex;align-items:center;gap:8px;padding:13px 16px;color:#d1e4e5;font-size:12px}
+.game-preview figcaption>span:last-child{margin-left:auto;color:#88adaa;font-size:11px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#77dac5}
+.home-features{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:18px;color:#89aab3;font-size:11px}
+.home-features span::before{content:"✦";color:#d2b974;margin-right:7px}
+.home-setup{padding:28px;border:1px solid #ffffff24;border-radius:24px;background:linear-gradient(150deg,#173b46ed,#0c2935f5);box-shadow:0 24px 80px #0003}
+.setup-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.is-home .setup-heading h2{font-size:24px;letter-spacing:-.7px;margin:9px 0 0;line-height:1.2}
+.setup-heading>span{font-size:26px;color:#ffd16b;background:#ffd16b0d;border:1px solid #ffd16b26;border-radius:12px;padding:10px}
+.is-home .settings-line{margin:0 0 22px;justify-content:space-between;gap:10px}
+.is-home .settings-line .field{margin:0;flex:1}
+.is-home .settings-line input{width:100%;min-width:0}
+.is-home .field span,.is-home .terrain-picker legend,.equipment-label{font-size:12px;font-weight:600;color:#d4e3e5;margin-bottom:10px}
+.is-home input,.is-home select{border:1px solid #ffffff24;background:#071f2b99;border-radius:10px;padding:12px;color:#edf6f5}
+.is-home .settings-line .pill{font-size:11px;color:#ffda87;border:1px solid #ffd16b26;background:#ffd16b0a;align-self:end;margin-bottom:5px;padding:9px 10px}
+.is-home .terrain-picker{margin:0 0 22px}
+.is-home .terrain-options{gap:10px}
+.is-home .terrain-options button{border:1px solid #ffffff29;border-radius:10px;background:#0a2530}
+.is-home .terrain-options button[aria-pressed=true]{border-color:#ffd16b;box-shadow:0 0 0 1px #ffd16b}
+.is-home .terrain-options img{aspect-ratio:1.85}
+.is-home .terrain-options span{font-size:11px;padding:10px 3px}
+.equipment-label{display:flex;justify-content:space-between;gap:8px}
+.equipment-label span{font-size:11px;color:#91afb9;font-weight:400}
+.is-home .specials{max-width:none;gap:7px}
+.is-home .specials button{font-size:11px;padding:9px 10px;border-radius:8px;border-color:#ffffff20;background:#ffffff05;color:#c6dade}
+.is-home .specials button.chosen{background:#ffd16b1a;border-color:#ffd16b88;color:#ffdb8e}
+.is-home .home-setup>.field{margin:22px 0}
+.is-home .home-setup>.field select{width:100%}
+.is-home .actions{gap:10px;margin-top:16px}
+.is-home .actions .primary,.is-home .actions .secondary{flex:1;padding:14px 10px;font-size:13px;border-radius:10px;box-shadow:none;white-space:nowrap}
+.is-home .actions .primary{border:1px solid #ffda87;background:#ffd16b;color:#172c32}
+.is-home .actions .secondary{background:#ffffff07;border:1px solid #ffffff30}
+.is-home .actions:last-child{border-top:1px solid #ffffff12;padding-top:14px;justify-content:space-between;gap:4px}
+.is-home .menu-link{font-size:11px;color:#a9c2ca;text-decoration:none;padding:8px 0}
+.is-home .menu-link:hover{color:#ffda87}
+.is-home .footer-note{position:relative;right:auto;bottom:auto;text-align:center;color:#819faa;padding:0 24px 24px;font-size:11px;text-shadow:none}
+@media(min-width:1600px){.is-home .start{margin-top:56px}}
+@media(max-width:1480px){.is-home .start{margin-left:48px;margin-right:48px}}
+@media(max-width:1000px){.is-home .mast{padding:24px}.is-home .start{margin:16px 24px 0;gap:28px;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.home-setup{padding:22px}.is-home .start h1{font-size:64px;letter-spacing:-4px}.is-home .actions .primary,.is-home .actions .secondary{flex-basis:100%}.is-home .mast-tagline{display:none}}
+@media(max-width:760px){.is-home .start{grid-template-columns:1fr;max-width:560px;margin:10px auto 0;padding:0 20px 24px;gap:28px}.home-intro{padding-top:6px}.is-home .start h1{font-size:clamp(52px,12vw,76px);margin:14px 0 20px;letter-spacing:-3px}.is-home .home-intro h2{font-size:25px}.is-home .start p{margin-bottom:22px}.home-setup{padding:22px 18px;border-radius:18px}.is-home .setup-heading h2{font-size:22px}.is-home .mast{padding:20px}.is-home .brand{font-size:21px}.home-features{gap:8px 14px}.is-home .footer-note{display:block}.is-home .actions .primary,.is-home .actions .secondary{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.is-home button,.is-home a{transition:none}}
+.is-home .home-setup{min-width:0}
+.is-home .settings-line input:not([type]){width:100%}
+@media(max-width:760px){.is-home .start{width:100%;margin-left:0;margin-right:0}}
+.is-home .start{inset:auto}
+
+/* Full-screen artwork stays visible above and through the menu panels. */
+.is-home::before{position:fixed;inset:0;width:100%;height:100svh;max-height:none;background:linear-gradient(180deg,#071e2810 15%,#071e2820 45%,#071e2899 100%),url('/hero.jpg') center top/cover no-repeat;border-radius:0}
+.is-home .mast{max-width:none;background:linear-gradient(180deg,#071e28c9,#071e2826);padding:20px max(24px,calc((100vw - 1384px)/2));border-bottom:1px solid #ffffff16}
+.is-home .mast-tagline{color:#e0f0ee;text-shadow:0 1px 4px #071e28}
+.is-home .github-link{background:#071e2880}
+.is-home .start{width:calc(100% - 40px);max-width:900px;margin:clamp(80px,12svh,120px) auto 0;padding:0 0 28px;grid-template-columns:minmax(0,1fr);gap:20px}
+.is-home .home-setup,.is-home .home-gameplay{width:100%;max-width:640px;justify-self:center}
+.is-home .home-intro{position:relative;isolation:isolate;padding:12px 16px;max-width:none;margin:0;text-align:center;border:0;border-radius:0;background:none;box-shadow:none;text-shadow:0 2px 3px #041922,0 4px 16px #041922}
+.is-home .home-intro::before{content:"";position:absolute;inset:-24px -16px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,#041922d9 0%,#04192299 38%,#04192200 72%)}
+.is-home .home-intro h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.is-home .home-intro>.eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px;color:#ffe1a0;letter-spacing:3px}
+.is-home .home-intro>.eyebrow::before,.is-home .home-intro>.eyebrow::after{content:"";width:32px;height:1px;background:#ffd16b99}
+.is-home .home-intro h2{font-size:clamp(22px,2.2vw,28px);font-weight:900;line-height:1.2;margin-bottom:12px;color:#fff8e5}
+.is-home .home-punchline{color:#ffd16b}
+.is-home .home-setup{padding:22px;background:linear-gradient(145deg,#123c48cc,#092632b8);backdrop-filter:blur(5px);border-color:#d4f0ed45;box-shadow:0 20px 60px #00182050}
+.is-home .home-intro>p{color:#edf4ef;max-width:none;margin-bottom:0;font-family:inherit;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.1px}
+.is-home .home-setup .menu-link{color:#d1e2e6}
+.is-home .home-setup .specials button{background:#09263280;color:#e0eeee}
+.is-home .home-setup .specials button.chosen{background:#ffd16b30;color:#ffe3a2}
+.is-home .footer-note{color:#e0eeee;text-shadow:0 1px 4px #071e28}
+.is-home .setup-heading{margin-bottom:16px}
+.is-home .settings-line{margin-bottom:12px}
+.is-home .home-setup>.actions:not(:last-child){margin:0 0 20px}
+.is-home .terrain-picker{margin-bottom:16px}
+.is-home .terrain-options img{aspect-ratio:2.8}
+.is-home .home-setup>.field{margin:16px 0}
+.home-gameplay{width:100%;padding:16px;background:#071e28c9;border:1px solid #ffffff20;border-radius:20px}
+.is-home .home-features{color:#d4e5e7}
+@media(min-width:761px){.is-home .actions .primary,.is-home .actions .secondary{flex-basis:0}}
+@media(max-width:760px){.is-home::before{background-position:center,42% top}.is-home .start{margin-top:80px}.is-home .home-intro{padding:16px}.is-home .home-intro h2{font-size:20px;line-height:1.25;margin-bottom:8px}.is-home .home-intro>p{font-size:13px}.is-home .home-intro>.eyebrow{display:none}.is-home .home-setup{padding:18px}}
